@@ -3,9 +3,9 @@ function sumItems(array) {
   for (let item of array) {
     if (Array.isArray(item)) {
       sum += sumItems(item);
-    } else {
-      sum += item;
+      continue;
     }
+    sum += item;
   }
   return sum;
 }
